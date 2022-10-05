@@ -1,0 +1,53 @@
+{
+  "author": "YOU <YOU@example.com>",
+  "name": "my_actionhero_project",
+  "description": "my actionhero project",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "actionhero": "28.1.14",
+    "ws": "latest",
+    "ioredis": "latest",
+    "ioredis-mock": "latest",
+    "winston": "latest",
+    "ah-next-plugin": "^1.0.4",
+    "next": "^12.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^18.0.6",
+    "@types/node": "latest",
+    "@types/glob": "latest",
+    "@types/jest": "latest",
+    "jest": "latest",
+    "prettier": "latest",
+    "ts-jest": "latest",
+    "ts-node-dev": "latest",
+    "type-fest": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "build": "npm run build-api && npm run build-web",
+    "build-api": "cd api && rm -rf dist && tsc --sourceMap false --declaration",
+    "build-web": "cd client && next build",
+    "postinstall": "npm run build",
+    "dev": "cd api && ts-node-dev --transpile-only --ignore-watch=\"../web\" --no-deps --notify=false ./src/server",
+    "debug": "tsc && ts-node-dev --transpile-only --no-deps --inspect -- ./src/server ",
+    "start": "cd api && ./dist/server",
+    "actionhero": "actionhero",
+    "test": "jest",
+    "pretest": "npm run build && npm run lint",
+    "lint": "prettier --check src/*/** __tests__/*/**",
+    "pretty": "prettier --write src/*/** __tests__/*/**"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    }
+  }
+}

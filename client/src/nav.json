@@ -1,0 +1,158 @@
+[
+  {
+    "group": "Getting Started",
+    "pages": [
+      {
+        "title": "Quickstart",
+        "description": "Get up and running with your existing workflow",
+        "href": "/quickstart"
+      }
+    ]
+  },
+  {
+    "group": "Settings",
+    "pages": [
+      {
+        "title": "Global Settings (mint.json)",
+        "description": "Mintlify gives you complete control over the look and feel of your documentation.",
+        "href": "/settings/customization"
+      },
+      {
+        "title": "Page Titles and Metadata",
+        "description": "Metadata is important for API pages and SEO optimization.",
+        "href": "/settings/page"
+      }
+    ]
+  },
+  {
+    "group": "Components",
+    "pages": [
+      {
+        "title": "Overview",
+        "description": "How components work",
+        "href": "/components/overview"
+      },
+      {
+        "title": "Accordions",
+        "description": "Using the Accordion component",
+        "href": "/components/accordion"
+      },
+      {
+        "title": "Cards",
+        "description": "Highlight main points or links with customizable icons",
+        "href": "/components/card"
+      },
+      {
+        "title": "Code Blocks",
+        "description": "Display inline code and code blocks",
+        "href": "/components/code"
+      },
+      {
+        "title": "Callout Boxes",
+        "description": "Use callouts to create add eye-catching context to your content",
+        "href": "/components/callout"
+      },
+      {
+        "title": "Custom Embeds",
+        "description": "Images, videos, and any HTML elements",
+        "href": "/components/embed"
+      },
+      {
+        "title": "Images",
+        "description": "Create images using markdown or embeds",
+        "href": "/components/image"
+      },
+      {
+        "title": "Image Container",
+        "description": "Use the Frame component to wrap images or other components in a container",
+        "href": "/components/frame"
+      },
+      {
+        "title": "Lists",
+        "description": "Create ordered and unordered lists",
+        "href": "/components/list"
+      },
+      {
+        "title": "Simple Text",
+        "description": "Text, title, and styling in standard markdown",
+        "href": "/components/text"
+      },
+      {
+        "title": "Tables",
+        "description": "Display an arrangement of data in rows and columns",
+        "href": "/components/table"
+      }
+    ]
+  },
+  {
+    "group": "API Components",
+    "pages": [
+      {
+        "title": "Overview",
+        "description": "Enable users interact with your API",
+        "href": "/api-components/overview"
+      },
+      {
+        "title": "Parameters",
+        "description": "Set path, query, and body parameters",
+        "href": "/api-components/param"
+      },
+      {
+        "title": "Responses",
+        "description": "Display API response values",
+        "href": "/api-components/response"
+      },
+      {
+        "title": "Expand Objects",
+        "description": "Toggle to display nested properties",
+        "href": "/api-components/expandable"
+      },
+      {
+        "title": "API Examples",
+        "description": "Display the request and response on the right sidebar",
+        "href": "/api-components/examples"
+      },
+      {
+        "title": "OpenAPI Support",
+        "description": "Reference OpenAPI endpoints for the API playground",
+        "href": "/api-components/openapi"
+      }
+    ]
+  },
+  {
+    "group": "Analytics",
+    "pages": [
+      {
+        "title": "Setup",
+        "description": "Mintlify integrates with a variety of analytics platforms.",
+        "href": "/site-stats/setup"
+      },
+      {
+        "title": "Google Analytics 4",
+        "description": "Also known as GA4",
+        "href": "/site-stats/ga4"
+      },
+      {
+        "title": "Amplitude Integration",
+        "description": "Mintlify can send analytics to Amplitude.",
+        "api": "PUT https://docs.mintlify.com/api/v1/sites/integrations/amplitude",
+        "auth": "bearer",
+        "href": "/site-stats/amplitude"
+      },
+      {
+        "title": "Mixpanel Integration",
+        "description": "Mintlify can send analytics to Mixpanel.",
+        "api": "PUT https://docs.mintlify.com/api/v1/sites/integrations/mixpanel",
+        "auth": "bearer",
+        "href": "/site-stats/mp"
+      },
+      {
+        "title": "PostHog Integration",
+        "description": "Mintlify can send analytics to PostHog.",
+        "api": "PUT https://docs.mintlify.com/api/v1/sites/integrations/posthog",
+        "auth": "bearer",
+        "href": "/site-stats/posthog"
+      }
+    ]
+  }
+]
