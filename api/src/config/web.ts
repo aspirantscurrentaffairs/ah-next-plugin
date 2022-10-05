@@ -45,7 +45,7 @@ export const DEFAULT = {
       urlPathForFiles: "public",
       // When visiting the root URL, should visitors see 'api' or 'file'?
       //  Visitors can always visit /api and /public as normal
-      rootEndpointType: "file",
+      rootEndpointType: "api",
       // In addition to what's defined in config/routes.ts, should we make a route for every action?  Useful for debugging or simple APIs.
       // automaticRoutes should an array of strings - HTTP verbs, ie: [] (default), ['get'], ['post'], ['get','put'], ['get','post','put'], etc.
       automaticRoutes: process.env.AUTOMATIC_ROUTES
