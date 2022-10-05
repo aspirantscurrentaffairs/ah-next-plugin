@@ -11,11 +11,7 @@ declare module "actionhero" {
 export const DEFAULT: { [namespace]: () => RoutesConfig } = {
   [namespace]: () => {
     return {
-      get: [
-        { path: "/status", action: "status" },
-        { path: "/swagger", action: "swagger" },
-        { path: "/createChatRoom", action: "createChatRoom" },
-      ],
+      get: [],
 
       /* ---------------------
       For web clients (http and https) you can define an optional RESTful mapping to help route requests to actions.

@@ -1,9 +1,5 @@
-import { brands, regular } from '@fortawesome/fontawesome-svg-core/import.macro';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Dialog } from '@headlessui/react';
-import axios from 'axios';
 import clsx from 'clsx';
-import gh from 'github-url-to-object';
 import Link from 'next/link';
 import Router from 'next/router';
 import { useEffect, useState } from 'react';
@@ -89,60 +85,7 @@ export function NavPopover({
   );
 }
 
-function GitHubCta({ button }: { button: TopbarCta }) {
-  const [repoData, setRepoData] = useState<{ stargazers_count: number; forks_count: number }>();
-
-  const github = gh(button.url);
-
-  useEffect(() => {
-    if (github == null) {
-      return;
-    }
-
-    axios.get(`https://api.github.com/repos/${github.user}/${github.repo}`).then(({ data }) => {
-      setRepoData(data);
-    });
-  }, [github]);
-
-  if (github == null) {
-    return null;
-  }
-
-  return (
-    <li className="cursor-pointer">
-      <Link href={button.url}>
-        <div className="group flex items-center space-x-3">
-          <FontAwesomeIcon className="h-6 w-6" icon={brands('github-square')} />
-          <div className="font-normal">
-            <div className="text-sm font-medium text-slate-700 group-hover:text-slate-900 dark:text-slate-300 dark:group-hover:text-slate-200">
-              {github.user}/{github.repo}
-            </div>
-            {repoData ? (
-              <div className="text-xs flex items-center space-x-2 text-slate-600 dark:text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-300">
-                <span className="flex items-center space-x-1">
-                  <FontAwesomeIcon className="h-3 w-3" icon={regular('star')} />
-                  <span>{repoData.stargazers_count}</span>
-                </span>
-                <span className="flex items-center space-x-1">
-                  <FontAwesomeIcon className="h-3 w-3" icon={regular('code-fork')} />
-                  <span>{repoData.forks_count}</span>
-                </span>
-              </div>
-            ) : (
-              <div className="h-4" />
-            )}
-          </div>
-        </div>
-      </Link>
-    </li>
-  );
-}
-
 function TopBarCtaButton({ button }: { button: TopbarCta }) {
-  if (button.type === 'github') {
-    return <GitHubCta button={button} />;
-  }
-
   return (
     <li>
       <Link href={button.url}>

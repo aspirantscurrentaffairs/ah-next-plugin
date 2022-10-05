@@ -29,6 +29,7 @@ const sentryWebpackPluginOptions = {
   // Sites have to be manually added to our Sentry tracking so by default
   // new customers' sites will not have an auth token set.
   dryRun: process.env.VERCEL_ENV !== 'production' || !process.env.SENTRY_AUTH_TOKEN,
+  hideSourceMaps: true
 };
 
 export default withSentryConfig(
