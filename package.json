@@ -35,7 +35,7 @@
     "build-api": "cd api && rm -rf dist && tsc --sourceMap false --declaration",
     "build-web": "cd client && next build",
     "postinstall": "npm run build",
-    "dev": "cd api && ts-node-dev --transpile-only --ignore-watch=\"../web\" --no-deps --notify=false ./src/server",
+    "dev": "cd api && ts-node-dev --transpile-only --ignore-watch=\"../client\" --no-deps --notify=false ./src/server",
     "debug": "tsc && ts-node-dev --transpile-only --no-deps --inspect -- ./src/server ",
     "start": "cd api && ./dist/server",
     "actionhero": "actionhero",
