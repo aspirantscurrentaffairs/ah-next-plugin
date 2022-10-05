@@ -1,2 +1,6 @@
 node_modules
 .DS_Store
+
+# Redis
+dump.rdb
+cache.dump

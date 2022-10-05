@@ -6,7 +6,6 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "type": "module",
   "dependencies": {
     "actionhero": "28.1.14",
     "ws": "latest",
